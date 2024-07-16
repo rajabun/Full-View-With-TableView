@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetViewController" customModule="Full_View_With_TableView" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="faE-pz-bxc" id="1gm-ZJ-EdG"/>
+                <outlet property="bottomSheetView" destination="xML-Js-SLr" id="XKl-ER-gbz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faE-pz-bxc">
+                    <rect key="frame" x="0.0" y="59" width="393" height="148"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xML-Js-SLr">
+                    <rect key="frame" x="0.0" y="207" width="393" height="645"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="faE-pz-bxc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="564-ms-Poh"/>
+                <constraint firstItem="xML-Js-SLr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9Gh-ay-hsx"/>
+                <constraint firstItem="faE-pz-bxc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Daz-ra-dwu"/>
+                <constraint firstAttribute="bottom" secondItem="xML-Js-SLr" secondAttribute="bottom" id="MU3-gX-FM6"/>
+                <constraint firstItem="xML-Js-SLr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YMY-bX-gX7"/>
+                <constraint firstItem="xML-Js-SLr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="207" id="jFx-Fl-Qgo"/>
+                <constraint firstItem="faE-pz-bxc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rkb-2I-ZpC"/>
+                <constraint firstItem="xML-Js-SLr" firstAttribute="top" secondItem="faE-pz-bxc" secondAttribute="bottom" id="yf7-VK-jta"/>
+            </constraints>
+            <point key="canvasLocation" x="125.95419847328243" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

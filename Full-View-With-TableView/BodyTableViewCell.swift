@@ -23,6 +23,7 @@ class BodyTableViewCell: UITableViewCell {
     @IBOutlet weak var likeCountText: UILabel!
 
     internal var dotMenuCallback: (() -> Void)?
+    internal var shareMenuCallback: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,6 +53,7 @@ class BodyTableViewCell: UITableViewCell {
     }
     
     @IBAction func shareButtonTapped(_ sender: UIButton) {
+        shareMenuCallback?()
     }
     
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {

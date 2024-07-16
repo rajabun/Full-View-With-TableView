@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="Full_View_With_TableView" customModuleProvider="target">
             <connections>
                 <outlet property="generalFrameView" destination="ZFy-2u-T9e" id="3vM-l5-UNa"/>
+                <outlet property="overlayView" destination="2Ba-LM-PZm" id="Fq3-WE-fpU"/>
                 <outlet property="view" destination="hVY-mL-rqZ" id="vfY-SV-mVn"/>
             </connections>
         </placeholder>
@@ -24,14 +25,22 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ba-LM-PZm">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="u15-yK-aoU"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="2Ba-LM-PZm" firstAttribute="bottom" secondItem="u15-yK-aoU" secondAttribute="bottom" id="3mR-EY-6nu"/>
+                <constraint firstItem="2Ba-LM-PZm" firstAttribute="leading" secondItem="u15-yK-aoU" secondAttribute="leading" id="4cS-6R-DYm"/>
+                <constraint firstItem="2Ba-LM-PZm" firstAttribute="top" secondItem="hVY-mL-rqZ" secondAttribute="top" id="8hp-36-mEv"/>
                 <constraint firstItem="ZFy-2u-T9e" firstAttribute="leading" secondItem="u15-yK-aoU" secondAttribute="leading" id="Bos-he-Dpd"/>
                 <constraint firstItem="ZFy-2u-T9e" firstAttribute="top" secondItem="u15-yK-aoU" secondAttribute="top" id="CJ6-r3-Q4w"/>
                 <constraint firstItem="ZFy-2u-T9e" firstAttribute="bottom" secondItem="u15-yK-aoU" secondAttribute="bottom" id="COy-dj-iEV"/>
                 <constraint firstItem="ZFy-2u-T9e" firstAttribute="trailing" secondItem="u15-yK-aoU" secondAttribute="trailing" id="SBu-XI-i4J"/>
+                <constraint firstItem="2Ba-LM-PZm" firstAttribute="trailing" secondItem="u15-yK-aoU" secondAttribute="trailing" id="YoU-X5-MeA"/>
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="-20.422535211267608"/>
         </view>

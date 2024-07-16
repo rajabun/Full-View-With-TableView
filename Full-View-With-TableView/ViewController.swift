@@ -14,6 +14,7 @@ enum Menu {
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var generalFrameView: UITableView!
     var menuArray: [Menu] = []
 
@@ -45,6 +46,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.dotMenuCallback = {
                 cell?.dotMenuButton.menu = self.setupPopupMenu()
                 cell?.dotMenuButton.showsMenuAsPrimaryAction = true
+            }
+            cell?.shareMenuCallback = {
+                self.overlayView.isHidden = false
+                let newViewController = BottomSheetViewController()
+                newViewController.modalPresentationStyle = .overFullScreen
+                newViewController.overlayViewCallback = {
+                    self.overlayView.isHidden = true
+                }
+                self.navigationController?.present(newViewController, animated: true)
             }
             return cell ?? UITableViewCell()
         }
