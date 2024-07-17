@@ -44,6 +44,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         switch menuArray[indexPath.row] {
         case .header:
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderTableViewCell
+            cell?.iconSelectedCallback = { iconIndex in
+                self.showAlertUserIconTapped(selectedIndex: iconIndex)
+            }
             return cell ?? UITableViewCell()
         case .body:
             let cell = tableView.dequeueReusableCell(withIdentifier: "BodyCell", for: indexPath) as? BodyTableViewCell
@@ -87,5 +90,16 @@ extension ViewController {
 
     @objc internal func dismissKeyboard(gestureRecognizer: UITapGestureRecognizer) {
         self.view.endEditing(true)
+    }
+    
+    private func showAlertUserIconTapped(selectedIndex: String) {
+        // create the alert
+        let alert = UIAlertController(title: "Icon \(selectedIndex) Selected", message: "This is my message.", preferredStyle: UIAlertController.Style.alert)
+
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 class HeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var iconCollectionView: UICollectionView!
+    internal var iconSelectedCallback: ((String) -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,8 +32,9 @@ extension HeaderTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = iconCollectionView.dequeueReusableCell(withReuseIdentifier: "IconView", for: indexPath) as? IconCollectionViewCell
+        cell?.houseSelectedCallback = {
+            self.iconSelectedCallback?("\(indexPath.item)")
+        }
         return cell ?? UICollectionViewCell()
     }
-    
-    
 }

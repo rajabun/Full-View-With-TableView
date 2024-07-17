@@ -9,9 +9,14 @@ import UIKit
 
 class IconCollectionViewCell: UICollectionViewCell {
 
+    internal var houseSelectedCallback: (() -> Void)?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    @IBAction func houseTapped(_ sender: UIButton) {
+        houseSelectedCallback?()
+    }
 }
