@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
-        menuArray = [.body, .body]
+        menuArray = [.header, .body]
         addGestureForDismissKeyboard()
     }
 }
@@ -30,6 +30,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func setTableView() {
         self.generalFrameView.delegate = self
         self.generalFrameView.dataSource = self
+        let headerView = UINib(nibName: "HeaderTableViewCell", bundle: nil)
+        generalFrameView.register(headerView, forCellReuseIdentifier: "HeaderCell")
         let bodyView = UINib(nibName: "BodyTableViewCell", bundle: nil)
         generalFrameView.register(bodyView, forCellReuseIdentifier: "BodyCell")
     }
@@ -41,7 +43,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch menuArray[indexPath.row] {
         case .header:
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderTableViewCell
+            return cell ?? UITableViewCell()
         case .body:
             let cell = tableView.dequeueReusableCell(withIdentifier: "BodyCell", for: indexPath) as? BodyTableViewCell
             cell?.dotMenuCallback = {
