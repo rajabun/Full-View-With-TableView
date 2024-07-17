@@ -27,7 +27,8 @@ class BodyTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        addDoneButtonOnKeyboard()
+        commentTextView.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -59,4 +60,32 @@ class BodyTableViewCell: UITableViewCell {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
     }
     
+}
+
+extension BodyTableViewCell: UITextViewDelegate {
+    internal func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+
+    private func addDoneButtonOnKeyboard() {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar.barStyle = .default
+
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
+
+        let items = [flexSpace, done]
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+
+        commentTextView.inputAccessoryView = doneToolbar
+    }
+
+    @objc private func doneButtonAction() {
+        commentTextView.resignFirstResponder()
+    }
 }

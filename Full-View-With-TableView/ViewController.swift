@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setTableView()
         menuArray = [.body, .body]
+        addGestureForDismissKeyboard()
     }
 }
 
@@ -74,5 +75,14 @@ extension ViewController {
         }
         let menu = UIMenu(title: "My Menu", options: .displayInline, children: [usersItem , addUserItem , removeUserItem])
         return menu
+    }
+
+    private func addGestureForDismissKeyboard() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(gestureRecognizer:)))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc internal func dismissKeyboard(gestureRecognizer: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
 }
