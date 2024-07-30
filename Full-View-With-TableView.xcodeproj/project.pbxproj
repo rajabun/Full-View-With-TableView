@@ -27,6 +27,8 @@
 		4E8F56E42C3E484A004FE2A4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8F56E32C3E484A004FE2A4 /* ViewController.xib */; };
 		4E8F56E72C3EBB1A004FE2A4 /* BodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F56E52C3EBB1A004FE2A4 /* BodyTableViewCell.swift */; };
 		4E8F56E82C3EBB1A004FE2A4 /* BodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8F56E62C3EBB1A004FE2A4 /* BodyTableViewCell.xib */; };
+		4EE6C3942C590F1B004353A8 /* ConferenceVideoSessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6C3932C590F1B004353A8 /* ConferenceVideoSessionsViewController.swift */; };
+		4EE6C3962C590F23004353A8 /* InsetItemsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6C3952C590F23004353A8 /* InsetItemsGridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		4E8F56E32C3E484A004FE2A4 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		4E8F56E52C3EBB1A004FE2A4 /* BodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTableViewCell.swift; sourceTree = "<group>"; };
 		4E8F56E62C3EBB1A004FE2A4 /* BodyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyTableViewCell.xib; sourceTree = "<group>"; };
+		4EE6C3932C590F1B004353A8 /* ConferenceVideoSessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceVideoSessionsViewController.swift; sourceTree = "<group>"; };
+		4EE6C3952C590F23004353A8 /* InsetItemsGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsetItemsGridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				4E8F56B02C3BD97D004FE2A4 /* AppDelegate.swift */,
 				4E8F56B22C3BD97D004FE2A4 /* SceneDelegate.swift */,
 				4E2656DC2C3F088100BF90B4 /* TabBarViewController.swift */,
+				4EE6C3932C590F1B004353A8 /* ConferenceVideoSessionsViewController.swift */,
+				4EE6C3952C590F23004353A8 /* InsetItemsGridViewController.swift */,
 				4E8F56B42C3BD97D004FE2A4 /* ViewController.swift */,
 				4E8F56E32C3E484A004FE2A4 /* ViewController.xib */,
 				4E3258F62C46AA9900AFA162 /* BottomSheetViewController.swift */,
@@ -297,8 +303,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E265EAE2C47F64800E6152F /* HeaderTableViewCell.swift in Sources */,
+				4EE6C3942C590F1B004353A8 /* ConferenceVideoSessionsViewController.swift in Sources */,
 				4E8F56B52C3BD97D004FE2A4 /* ViewController.swift in Sources */,
 				4E3258F92C46AA9900AFA162 /* BottomSheetViewController.swift in Sources */,
+				4EE6C3962C590F23004353A8 /* InsetItemsGridViewController.swift in Sources */,
 				4E8F56B12C3BD97D004FE2A4 /* AppDelegate.swift in Sources */,
 				4E8F56E72C3EBB1A004FE2A4 /* BodyTableViewCell.swift in Sources */,
 				4E8F56B32C3BD97D004FE2A4 /* SceneDelegate.swift in Sources */,

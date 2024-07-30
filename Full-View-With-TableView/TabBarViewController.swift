@@ -22,11 +22,11 @@ public class TabBarViewController: UITabBarController {
         firstVC.tabBarItem.image = UIImage(systemName: "house")
         firstVC.tabBarItem.title = "Home"
 
-        let secondVC = ViewController()
+        let secondVC = ConferenceVideoSessionsViewController()
         secondVC.tabBarItem.image = UIImage(systemName: "magnifyingglass")
         secondVC.tabBarItem.title = "Search"
         
-        let thirdVC = ViewController()
+        let thirdVC = InsetItemsGridViewController()
         thirdVC.tabBarItem.image = UIImage(systemName: "qrcode")
         thirdVC.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
         thirdVC.tabBarItem.title = "QR Code"
